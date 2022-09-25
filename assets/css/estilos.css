@@ -1,0 +1,73 @@
+:root {
+    --azul: #54a7c0;
+}
+
+.text-azul {
+    color: var(--azul);
+}
+
+#img-usuario,
+#img-maquina {
+    height: 110px !important;
+}
+
+#cajon-resultado {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-height: 400px;
+}
+
+#grupo_botones {
+    border-radius: 15px;
+    border:2px solid var(--azul);
+}
+
+#cajon-resultado img,
+#grupo_botones img {
+    height: 140px;
+}
+
+.section-juego {
+    max-width: 500px;
+    margin: auto;
+}
+
+.caja-jugador {
+    width: 50%;
+    height: 200px;
+    background-color: rgba(255,255,255,0.5);
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius:10px;
+    flex-direction: column;
+    border:2px solid var(--azul);
+    transform: rotate(-10deg);
+}
+
+.caja-maquina {
+    width: 50%;
+    height: 200px; 
+    background-color: rgba(255,255,255,0.5);
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius:10px;
+    flex-direction: column;
+    border:2px solid var(--azul);
+    transform: rotate(10deg);
+}
+
+button:hover,
+button:focus {
+    background: var(--azul);
+    color: white;
+}
+
+button:hover p {
+    color: white;
+}
