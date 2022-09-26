@@ -13,6 +13,8 @@ const botonTijera = document.getElementById("tijera");
 const textoResultado = document.getElementById("resultado");
 const imgMaquina = document.getElementById("img-maquina");
 const imgUsuario = document.getElementById("img-usuario");
+let eleccionJugador = document.getElementById("eleccion-jugador");
+let eleccionMaquina = document.getElementById("eleccion-maquina");
 
 botonPiedra.addEventListener("click", () => {
     /* console.log("piedra"); */
@@ -31,6 +33,9 @@ botonTijera.addEventListener("click", () => {
 
 function play(OpcionUsuario) {
 
+    eleccionJugador.innerHTML = OpcionUsuario;
+    eleccionJugador.style = "text-transform: uppercase;";
+
     imgUsuario.src = "./assets/img/" + OpcionUsuario + ".png";
     textoResultado.innerHTML = "Jugando...";
 
@@ -39,6 +44,7 @@ function play(OpcionUsuario) {
         imgMaquina.src = "./assets/img/" + OpcionMaquina + ".png";
     }, 200);
 
+    /* eleccionMaquina.innerHTML = OpcionMaquina; */
     setTimeout(function () {
 
         clearInterval(intervalo);
@@ -50,6 +56,9 @@ function play(OpcionUsuario) {
         const resultado = calcularResultado(OpcionUsuario, OpcionMaquina)
 
         imgMaquina.src = "./assets/img/" + OpcionMaquina + ".png";
+
+        eleccionMaquina.innerHTML = OpcionMaquina;
+        eleccionMaquina.style = "text-transform: uppercase;";
 
         switch (resultado) {
             case empate:

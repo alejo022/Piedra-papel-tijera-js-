@@ -6,27 +6,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Piedra Papel Tijera</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/estilos.css">
 </head>
+
 <body>
     <div class="container mt-4 mb-4">
-        <div class="modal-header mb-4 content-titulo justify-content-center text-uppercase">
+        <div class="modal-header mb-4 content-titulo justify-content-center text-uppercase fw-bold">
             <h3 class="text-azul">
-                Juego Piedra, Papel o tijera
+                Juego de Piedra, Papel o tijera
             </h3>
         </div>
+
+
+        <table class="table table-striped table-hover text-center table-bordered">
+            <thead class="bg-azul text-white fw-bold">
+                <tr>
+                    <th scope="col">Partidas perdidas</th>
+                    <th scope="col">Partidas empatadas</th>
+                    <th scope="col">Partidas ganadas ✨</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th id=""> <span id="txt_losses"></span>0</th>
+                    <th id=""><span id="txt_draws"></span>0</th>
+                    <th id=""><span id="txt_wins"></span>0</th>
+                </tr>
+            </tbody>
+        </table>
+
         <h4 class="text-center w-100 font-weight-bold">Juega contra la maquina...</h4>
         <section class="section-juego">
             <div class="container">
                 <div id="cajon-resultado">
-                    <h4 id="resultado" class="text-center w-100 text-azul font-weight-bold">
+                    <h2 id="resultado" class="text-center w-100 text-azul font-weight-bold">
                         Haz tu elección para comenzar
-                    </h4>
+                    </h2>
                     <div class="row mt-4 mb-4 d-flex w-100">
-                        <div class="caja-jugador">
-                            <p class="font-weight-bold" id="eleccion-jugador">
+                        <div class="caja-jugador shadow">
+                            <p class="fw-bold text-azul" id="eleccion-jugador">
                                 Elección Jugador
                             </p>
                             <img id="img-usuario" src="./assets/img/pregunta.png" alt="img-jugador">
@@ -34,8 +54,8 @@
                                 Jugador
                             </p>
                         </div>
-                        <div class="caja-maquina">
-                            <p class="font-weight-bold" id="eleccion-maquina">
+                        <div class="caja-maquina shadow">
+                            <p class="fw-bold text-azul" id="eleccion-maquina">
                                 Elección Maquina
                             </p>
                             <img id="img-maquina" src="./assets/img/pregunta.png" alt="img-maquina">
@@ -50,26 +70,28 @@
                 <button class="btn" id="piedra">
                     <img src="./assets/img/piedra.png" class="card-img-top" alt="Piedra">
                     <div class="card-body">
-                        <p class="card-text text-center">Piedra</p>
+                        <p class="card-text text-center">PIEDRA</p>
                     </div>
                 </button>
                 <button class="btn" id="papel">
                     <img src="./assets/img/papel.png" class="card-img-top" alt="Papel">
                     <div class="card-body">
-                        <p class="card-text text-center">Papel</p>
+                        <p class="card-text text-center">PAPEL</p>
                     </div>
                 </button>
                 <button class="btn" id="tijera">
                     <img src="./assets/img/tijera.png" class="card-img-top" alt="Tijera">
                     <div class="card-body">
-                        <p class="card-text text-center">Tijera</p>
+                        <p class="card-text text-center">TIJERA</p>
                     </div>
                 </button>
             </div>
         </section>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
 
     <script src="assets/js/piedra_papel_tijera.js"></script>
 </body>

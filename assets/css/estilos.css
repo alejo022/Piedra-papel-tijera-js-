@@ -6,6 +6,14 @@
     color: var(--azul);
 }
 
+.bg-azul {
+    background-color: var(--azul);
+}
+
+.content-titulo {
+    border-bottom: 2px solid var(--azul);
+}
+
 #img-usuario,
 #img-maquina {
     height: 110px !important;
@@ -21,7 +29,7 @@
 
 #grupo_botones {
     border-radius: 15px;
-    border:2px solid var(--azul);
+    border: 2px solid var(--azul);
 }
 
 #cajon-resultado img,
@@ -37,28 +45,28 @@
 .caja-jugador {
     width: 50%;
     height: 200px;
-    background-color: rgba(255,255,255,0.5);
+    background-color: rgba(255, 255, 255, 0.5);
     padding: 2%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-radius:10px;
+    border-radius: 10px;
     flex-direction: column;
-    border:2px solid var(--azul);
+    border: 2px solid var(--azul);
     transform: rotate(-10deg);
 }
 
 .caja-maquina {
     width: 50%;
-    height: 200px; 
-    background-color: rgba(255,255,255,0.5);
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.5);
     padding: 2%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-radius:10px;
+    border-radius: 10px;
     flex-direction: column;
-    border:2px solid var(--azul);
+    border: 2px solid var(--azul);
     transform: rotate(10deg);
 }
 
