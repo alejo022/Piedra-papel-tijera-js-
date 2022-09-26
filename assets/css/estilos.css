@@ -64,8 +64,8 @@
 
 button:hover,
 button:focus {
-    background: var(--azul);
-    color: white;
+    background-color: var(--azul) !important;
+    color: white !important;
 }
 
 button:hover p {
