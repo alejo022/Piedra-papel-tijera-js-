@@ -79,3 +79,12 @@ button:focus {
 button:hover p {
     color: white;
 }
+
+
+.img-eleccion {
+    transition: all 1s ease 0.1s;
+}
+
+button:focus .img-eleccion {
+    transform: scale(0.6);
+}

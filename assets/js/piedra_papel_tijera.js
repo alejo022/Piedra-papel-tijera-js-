@@ -6,6 +6,9 @@ const empate = 0;
 const gano = 1;
 const perdio = 2;
 
+let empataron = 0;
+let ganaste = 0;
+let perdiste = 0;
 
 const botonPiedra = document.getElementById("piedra");
 const botonPapel = document.getElementById("papel");
@@ -15,6 +18,9 @@ const imgMaquina = document.getElementById("img-maquina");
 const imgUsuario = document.getElementById("img-usuario");
 let eleccionJugador = document.getElementById("eleccion-jugador");
 let eleccionMaquina = document.getElementById("eleccion-maquina");
+let txtPerdiste = document.getElementById("txt_perdiste");
+let txtEmpataron = document.getElementById("txt_empataron");
+let txtGanaste = document.getElementById("txt_ganaste");
 
 botonPiedra.addEventListener("click", () => {
     /* console.log("piedra"); */
@@ -63,14 +69,17 @@ function play(OpcionUsuario) {
         switch (resultado) {
             case empate:
                 /* alert(OpcionMaquina+"Hubo un empate"); */
+                txtEmpataron.innerHTML = empataron;
                 textoResultado.innerHTML = "Hubo un empate";
                 break;
             case gano:
                 /* alert(OpcionMaquina+"Ganaste"); */
+                txtGanaste.innerHTML = ganaste;
                 textoResultado.innerHTML = "Ganaste";
                 break;
             case perdio:
                 /* alert(OpcionMaquina+"Perdiste"); */
+                txtPerdiste.innerHTML = perdiste;
                 textoResultado.innerHTML = "Perdiste";
                 break;
         }
@@ -92,21 +101,40 @@ function calcularOpcionMaquina() {
 
 function calcularResultado(OpcionUsuario, OpcionMaquina) {
     if (OpcionUsuario === OpcionMaquina) {
+        empataron++;
         return empate
     } else if (OpcionUsuario === piedra) {
 
-        if (OpcionMaquina === papel) return perdio;
-        if (OpcionMaquina === tijeras) return gano;
+        if (OpcionMaquina === papel) {
+            perdiste++;
+            return perdio;
+        }
+        if (OpcionMaquina === tijeras) {
+            ganaste++;
+            return gano;
+        }
 
     } else if (OpcionUsuario === papel) {
 
-        if (OpcionMaquina === piedra) return gano;
-        if (OpcionMaquina === tijeras) return perdio;
+        if (OpcionMaquina === piedra) {
+            ganaste++;
+            return gano;
+        }
+        if (OpcionMaquina === tijeras) {
+            perdiste++;
+            return perdio;
+        }
 
     } else if (OpcionUsuario === tijeras) {
 
-        if (OpcionMaquina === piedra) return perdio;
-        if (OpcionMaquina === papel) return gano;
+        if (OpcionMaquina === piedra) {
+            perdiste++;
+            return perdio;
+        }
+        if (OpcionMaquina === papel) {
+            ganaste++;
+            return gano;
+        }
 
     }
 }
